@@ -15,7 +15,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-Bundle 'The-NERD-tree'
 Bundle 'ZenCoding.vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-ruby/vim-ruby'
@@ -26,7 +25,7 @@ Bundle 'vim-coffee-script'
 Bundle 'sudo.vim'
 Bundle 'xml.vim'
 Bundle 'flazz/vim-colorschemes'
-Bundle 'SyntaxComplete'
+Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-dispatch'
@@ -57,7 +56,12 @@ let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 
 "RUBY plugin
-autocmd FileType ruby compiler ruby
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+"improve autocomplete menu color
+highlight Pmenu ctermbg=238 gui=bold
 
 " 设定文件浏览器目录为当前目录  
 set bsdir=buffer  
@@ -198,9 +202,6 @@ if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-"let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-"let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
 " code search
 let g:ackprg = 'ag --nogroup --nocolor --column'
