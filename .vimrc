@@ -111,7 +111,7 @@ let g:NERDTreeWinSize = 32
 map <leader>f :NERDTreeToggle<CR>
 
 " Settings for tagslist
-let Tlist_Use_LEFT_Window = 0
+let Tlist_Use_Right_Window = 1
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Show_One_File = 1
 let Tlist_Sort_Type ='name'
