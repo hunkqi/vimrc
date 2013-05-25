@@ -20,6 +20,7 @@ Bundle 'ervandew/supertab'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'rubycomplete.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/taglist.vim'
 Bundle 'ctrlp.vim' 
 Bundle 'vim-coffee-script'
 Bundle 'sudo.vim'
@@ -46,7 +47,7 @@ filetype plugin indent on     " required!
  " End of vundle configuration
 "Powerline setting
 "Set GUI font type
- set guifont=Source\ Code\ Pro\ for\ Powerline\ for\ Powerline\
+set guifont=Source\ Code\ Pro\:h18
 let g:Powerline_symbols = 'fancy'
 
 "auto completed
@@ -106,8 +107,19 @@ map <leader>tm :tabmove
 "let loaded_nerd_tree=1
 let NERDTreeQuitOnOpen = 1
 let NERDChristmasTree=1
-let g:NERDTreeWinSize = 18 
+let g:NERDTreeWinSize = 32 
 map <leader>f :NERDTreeToggle<CR>
+
+" Settings for tagslist
+let Tlist_Use_LEFT_Window = 0
+let Tlist_File_Fold_Auto_Close = 1
+let Tlist_Show_One_File = 1
+let Tlist_Sort_Type ='name'
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_WinWidth = 32
+let Tlist_Ctags_Cmd ='/usr/local/Cellar/ctags/5.8/bin/ctags'
+map <leader>t :TlistToggle<CR>
 
 "switch window
 :map <leader>w <C-W>w
@@ -138,9 +150,7 @@ let g:ctrlp_working_path_mode = 2
 "use in  edit
 imap <C-A> <C-C><c-p>
 "use in none edit
-:map <leader>t <c-p>
 :map <leader>b :CtrlPBuffer<CR>
-
 
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png,*.gif,*.jpeg,.DS_Store  " MacOSX/Linux

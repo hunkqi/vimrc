@@ -1,7 +1,7 @@
 "set colortheme
 "colorscheme  autumn
 
-colorscheme blackboard
+colorscheme monokai
 
 "把gvim的菜单和工具栏隐藏掉,按F2可调出,再按隐藏  
  set guioptions-=m  
@@ -20,4 +20,4 @@ colorscheme blackboard
 " set font
 set guifont=Source\ Code\ Pro\ 18
 " Sets the percent transparency
-set transparency=10
+set transparency=2
