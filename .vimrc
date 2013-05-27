@@ -1,4 +1,3 @@
-call pathogen#infect()
 syntax on
 " set color theme
 "colorscheme blackboard
@@ -63,6 +62,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
+
+"Setup SuperTab
+let g:SuperTabRetainCompletionType="context"
 
 " 设定文件浏览器目录为当前目录  
 set bsdir=buffer  
@@ -146,12 +148,15 @@ imap <C-S> <C-C>:w<CR>
 "set CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 2
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height=15
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_mruf_max=500
+let g:ctrlp_follow_symlinks=1
 "use in  edit
 imap <C-A> <C-C><c-p>
-"use in none edit
-:map <leader>b :CtrlPBuffer<CR>
-
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png,*.gif,*.jpeg,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
