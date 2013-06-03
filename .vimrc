@@ -34,6 +34,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-dispatch'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
 
 filetype plugin indent on     " required!
  "
@@ -98,8 +99,8 @@ set foldmethod=indent
 set foldlevelstart=99
 
 "set my leader
-let mapleader=","
-let g:mapleader=","
+let mapleader=";"
+let g:mapleader=";"
 
 "tabs
 map <leader>tn :tabnew<cr>
@@ -114,6 +115,9 @@ let NERDTreeQuitOnOpen = 1
 let NERDChristmasTree=1
 let g:NERDTreeWinSize = 32 
 map <leader>f :NERDTreeToggle<CR>
+
+" Settings for vim-easymotion
+let g:EasyMotion_leader_key = "'"
 
 " Settings for tagslist
 let Tlist_Use_Right_Window = 1

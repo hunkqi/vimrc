@@ -1,7 +1,7 @@
 "set colortheme
 "colorscheme  autumn
-
-colorscheme monokai
+colorscheme desert
+"colorscheme monokai
 
 "把gvim的菜单和工具栏隐藏掉,按F2可调出,再按隐藏  
  set guioptions-=m  
@@ -18,6 +18,6 @@ colorscheme monokai
  set lines=100 columns=300
  
 " set font
-set guifont=Source\ Code\ Pro\ 18
+set guifont=Menlo\ for\ Powerline:h13
 " Sets the percent transparency
 set transparency=2
