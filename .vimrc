@@ -181,13 +181,13 @@ vmap    <c-tab>     >gv
 vmap    <s-tab>     <gv
 
 " tab navigation like zsh
-:nmap <D-1> :tabprevious<CR>
-:map <D-1> :tabprevious<CR>
-imap <D-1> <Esc>:tabprevious<CR>i
+:nmap <M-1> :tabprevious<CR>
+:map <M-1> :tabprevious<CR>
+imap <M-1> <Esc>:tabprevious<CR>i
 
-:nmap <D-2> :tabnext<CR>
-:map <D-2> :tabnext<CR>
-imap <D-2> <Esc>:tabnext<CR>i
+:nmap <M-2> :tabnext<CR>
+:map <M-2> :tabnext<CR>
+imap <M-2> <Esc>:tabnext<CR>i
 
 
 "scss,sass
