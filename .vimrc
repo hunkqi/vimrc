@@ -35,6 +35,7 @@ Bundle 'tpope/vim-dispatch'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'TimothyYe/vim-tips'
 
 filetype plugin indent on     " required!
  "
@@ -117,7 +118,7 @@ let g:NERDTreeWinSize = 32
 map <leader>f :NERDTreeToggle<CR>
 
 " Settings for vim-easymotion
-let g:EasyMotion_leader_key = "'"
+let g:EasyMotion_leader_key = ","
 
 " Settings for tagslist
 let Tlist_Use_Right_Window = 1
@@ -181,13 +182,13 @@ vmap    <c-tab>     >gv
 vmap    <s-tab>     <gv
 
 " tab navigation like zsh
-:nmap <M-1> :tabprevious<CR>
-:map <M-1> :tabprevious<CR>
-imap <M-1> <Esc>:tabprevious<CR>i
+:nmap <leader>p :tabprevious<CR>
+:map <leader>p :tabprevious<CR>
+:imap <leader>p <Esc>:tabprevious<CR>i
 
-:nmap <M-2> :tabnext<CR>
-:map <M-2> :tabnext<CR>
-imap <M-2> <Esc>:tabnext<CR>i
+:nmap <leader>n :tabnext<CR>
+:map <leader>n :tabnext<CR>
+:imap <leader>n <Esc>:tabnext<CR>i
 
 
 "scss,sass

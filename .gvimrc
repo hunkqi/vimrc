@@ -1,7 +1,7 @@
 "set colortheme
 "colorscheme  autumn
-colorscheme desert
-"colorscheme monokai
+"colorscheme desert
+colorscheme monokai
 
 "把gvim的菜单和工具栏隐藏掉,按F2可调出,再按隐藏  
  set guioptions-=m  
