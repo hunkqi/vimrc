@@ -22,7 +22,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'slim-template/vim-slim'
-Bundle 'plasticboy/vim-markdown'
+Bundle 'tangledhelix/vim-octopress'
 Bundle 'ctrlp.vim' 
 Bundle 'vim-coffee-script'
 Bundle 'sudo.vim'
@@ -190,18 +190,16 @@ vmap    <s-tab>     <gv
 :map <leader>n :tabnext<CR>
 :imap <leader>n <Esc>:tabnext<CR>i
 
+"markdown hightlight
+let g:octopress_rake_executable = '/usr/bin/rake'
 
 "scss,sass
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.sass set filetype=scss
 
 "coffee script
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
-hi link coffeeSpaceError NONE
-hi link coffeeSemicolonError NONE
-hi link coffeeReservedError NONE
-map <leader>cf :CoffeeCompile watch vert<cr>
+au BufWritePost *.coffee silent CoffeeMake!
+au BufWritePost *.coffee :CoffeeCompile watch vert
 
 "let skim use slim syntax
 au BufRead,BufNewFile *.skim set filetype=slim
